@@ -63,8 +63,7 @@ The table below describes all the attributes of the transaction object.
 | timestamp | Unix timestamp for the transaction |
 | gross_amount | The amount of the transaction |
 | net_amount | The amount received after deducting soofa |
-| transacted_via | The service provider which facilitated the transaction eg. mpesa, visa, airtelmoney,
- mastercard, tkash ... |
+| transacted_via | The service provider which facilitated the transaction eg. mpesa, visa, airtelmoney, mastercard, tkash ... |
 | is_money_in | A boolean indicating if the money was to the business or out of the bsiness |
 | sender | The performer of transaction |
 | receiver | The receiver of the transaction which is the business if the transaction was inbound |
