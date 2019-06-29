@@ -26,7 +26,7 @@ else:
     print("No such transaction")
 
 ```
-The expected response for transaction check is  `Transaction ` 
+The expected response for transaction check is  `Transaction` 
 object with various keys and methods
 
 There is an additional method for getting the entire json object.
