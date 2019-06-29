@@ -61,6 +61,7 @@ class Soofa(object):
 
 if __name__ == '__main__':
     soofa = Soofa("5002", '3ixwt45uq88wttqgixpyla8d27ob0w')
+    print(soofa.get_balance())
     exists = soofa.find("QTMB6")
     if exists:
         trx: Transaction = soofa.get_transaction()
