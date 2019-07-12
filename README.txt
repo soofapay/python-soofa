@@ -1,4 +1,4 @@
-# python-soofa
+# python soofa
 
 This package is aimed at simplifying the process of integrating
 soofapay payment solution to your python systems. You can check our
@@ -6,14 +6,14 @@ soofapay payment solution to your python systems. You can check our
 
 #### Installation
 ```sh
- $ pip install python-soofa
+ $ pip install soofa
  ```
 
 #### Usage
 
 ##### 1. Checking for a transaction
-```
-from python_soofa import Soofa, Transaction
+```python
+from soofa import Soofa, Transaction
 
 soofa = Soofa("you_soofa_till_number", "your_client_secret_here")
 exists = soofa.find("tranaction_id_here")
@@ -24,7 +24,6 @@ if exists:
     print(transaction.gross_amount)
 else:
     print("No such transaction")
-
 ```
 The expected response for transaction check is  `Transaction`
 object with various keys and methods
@@ -33,7 +32,7 @@ There is an additional method for getting the entire json object.
 
 > transaction.json()
 
-```
+```JSON
 {
     "status": "SUCCESSFUL",
     "sender_currency": "KES",
@@ -70,20 +69,22 @@ The table below describes all the attributes of the transaction object.
 
 
 ##### 2. Checking your soofa business account balance
-```
-from python_soofa import Soofa, Transaction
+```python
+from soofa import Soofa
 
 soofa = Soofa("you_soofa_till_number", "your_client_secret_here")
 balance = soofa.get_balance()
 print(balance)
 ```
+
 The expected response for checking balance is a JSON with three fields:
 
-> {
->     "balance": "1587.49",
->     "currency": "KES",
->     "timestamp": 1561820831.623298
-> }
+[website]: <https://www.soofapay.com>
 
 
-   [website]: <https://www.soofapay.com>
+```JSON
+{
+    "balance": "1587.49",
+    "currency": "KES",
+    "timestamp": 1561820831.623298
+}

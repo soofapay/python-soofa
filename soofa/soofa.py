@@ -1,18 +1,18 @@
+from __future__ import absolute_import
 import requests
 import logging
 
-from python_soofa import Transaction
+
+from soofa.transaction import Transaction
 
 __all__ = ["Soofa"]
 
 logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s', level=logging.INFO)
 
-
 class Soofa(object):
     TRANSACTION_DOES_NOT_EXIST = 404
     PERMISSION_DENIED = 403
     SUCCESSFUL = 200
-
 
     def __init__(self, till_no, client_secret):
         self.till_no = till_no
@@ -21,10 +21,10 @@ class Soofa(object):
         self.status = None
 
     def find(self, tid):
-        url = f"http://api.soofapay.com/v1/transactions/{tid}/"
+        url = 'http://api.soofapay.com/v1/transactions/%s/' % tid
         r = requests.get(
             url, headers={
-                "Authorization": f"Token {self.client_secret}",
+                "Authorization": "Token %s" % self.client_secret,
                 "X-TILL": self.till_no
         })
         self.status = r.status_code
@@ -34,7 +34,7 @@ class Soofa(object):
             return True,
         self.__raise403(self.status)
         if self.status == self.TRANSACTION_DOES_NOT_EXIST:
-            logging.warning("The transaction {0} does not exist".format(tid))
+            logging.warning("The transaction %s does not exist" % tid)
         return False
 
     def __raise403(self, status_code):
@@ -49,10 +49,10 @@ class Soofa(object):
         return self.transaction
 
     def get_balance(self):
-        url = f"http://api.soofapay.com/v1/balance/"
+        url = "http://api.soofapay.com/v1/balance/"
         r = requests.get(
             url, headers={
-                "Authorization": f"Token {self.client_secret}",
+                "Authorization": "Token %s" % self.client_secret,
                 "X-TILL": self.till_no
         })
         self.__raise403(r.status_code)
@@ -64,5 +64,5 @@ if __name__ == '__main__':
     print(soofa.get_balance())
     exists = soofa.find("QTMB6")
     if exists:
-        trx: Transaction = soofa.get_transaction()
-        print(trx.json())
+        transaction = soofa.get_transaction()
+        print(transaction.json())

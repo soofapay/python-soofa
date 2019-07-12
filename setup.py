@@ -1,8 +1,8 @@
 from distutils.core import setup
 setup(
-  name = 'python_soofa',
-  packages = ['python_soofa'],
-  version = '0.1.2',
+  name = 'soofa',
+  packages = ['soofa'],
+  version = '0.1.3',
   license='MIT',
   description = 'Python package to simplify integration to soofapay',
   author = 'Soofapay Team',

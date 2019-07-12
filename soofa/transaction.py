@@ -1,8 +1,10 @@
 from datetime import datetime
 
-__all__=["Transaction"]
+__all__ = ["Transaction"]
+
 
 class Transaction(object):
+
     def __init__(self, status, sender_currency, receiver_currency, tid, reference, sender, receiver,
                  receipt_no, timestamp, gross_amount, net_amount, transacted_via, is_money_in, **kwargs):
         self.sender = sender
@@ -17,7 +19,7 @@ class Transaction(object):
         self.gross_amount = gross_amount
         self.net_amount = net_amount
         self.transacted_via = transacted_via
-        self.is_money_in=is_money_in
+        self.is_money_in = is_money_in
 
     def json(self):
         return {
@@ -38,3 +40,4 @@ class Transaction(object):
 
     def get_time(self):
         return datetime.fromtimestamp(self.timestamp)
+
