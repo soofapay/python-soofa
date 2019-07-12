@@ -1,10 +1,16 @@
 from distutils.core import setup
+
+with open("README.md", "r") as fh:
+  long_description = fh.read()
+
 setup(
   name = 'soofa',
   packages = ['soofa'],
-  version = '0.1.3',
+  version = '0.1.5',
   license='MIT',
   description = 'Python package to simplify integration to soofapay',
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   author = 'Soofapay Team',
   author_email = 'info@soofapay.com',
   url = 'https://github.com/soofapay/python-soofa',
@@ -14,7 +20,7 @@ setup(
           'requests',
       ],
   classifiers=[
-    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+    'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',
