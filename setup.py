@@ -1,16 +1,15 @@
 from distutils.core import setup
 
-with open("README.md", "r") as fh:
+with open("README.rst", "r") as fh:
   long_description = fh.read()
 
 setup(
   name = 'soofa',
   packages = ['soofa'],
-  version = '0.1.5',
+  version = '0.1.6',
   license='MIT',
   description = 'Python package to simplify integration to soofapay',
   long_description=long_description,
-  long_description_content_type="text/markdown",
   author = 'Soofapay Team',
   author_email = 'info@soofapay.com',
   url = 'https://github.com/soofapay/python-soofa',

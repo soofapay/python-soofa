@@ -1,7 +1,6 @@
 # python soofa
 
-This package is aimed at simplifying the process of integrating 
-soofapay payment solution to your python systems. You can check our 
+This package is aimed at simplifying the process of integrating soofapay payment solution to your python systems. You can check our 
 [website] for more
 
 #### Installation
@@ -28,7 +27,7 @@ else:
 The expected response for transaction check is  `Transaction` 
 object with various keys and methods
 
-There is an additional method for getting the entire json object.
+There is an additional method for getting the entire JSON object.
 
 > transaction.json()
 
@@ -63,7 +62,7 @@ The table below describes all the attributes of the transaction object.
 | gross_amount | The amount of the transaction |
 | net_amount | The amount received after deducting soofa |
 | transacted_via | The service provider which facilitated the transaction eg. mpesa, visa, airtelmoney, mastercard, tkash ... |
-| is_money_in | A boolean indicating if the money was to the business or out of the bsiness |
+| is_money_in | A boolean indicating if the money was to the business or out of the business |
 | sender | The performer of transaction |
 | receiver | The receiver of the transaction which is the business if the transaction was inbound |
 
