@@ -31,7 +31,7 @@ class Soofa(object):
         if self.status == self.SUCCESSFUL:
             data = r.json()
             self.transaction = Transaction(**data)
-            return True,
+            return True
         self.__raise403(self.status)
         if self.status == self.TRANSACTION_DOES_NOT_EXIST:
             logging.warning("The transaction %s does not exist" % tid)
