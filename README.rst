@@ -46,14 +46,14 @@ There is an additional method for getting the entire JSON object.
        "sender_currency": "KES",
        "receiver_currency": "KES",
        "tid": "QTMB3",
-       "reference": "T5002",
+       "reference": "T5004",
        "receipt_no": "NFQ6U45W28",
        "timestamp": 1561499777.715254,
        "gross_amount": 5,
        "net_amount": 4.8605,
        "transacted_via": "mpesa",
        "is_money_in": true,
-       "sender": "+254721732519",
+       "sender": "+254701234567",
        "receiver": "Dev Market"
    }
 

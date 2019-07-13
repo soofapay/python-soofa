@@ -15,7 +15,7 @@ class Soofa(object):
     SUCCESSFUL = 200
 
     def __init__(self, till_no, client_secret):
-        self.till_no = till_no
+        self.till_no = str(int(till_no))
         self.client_secret = client_secret
         self.transaction = None
         self.status = None
@@ -60,7 +60,7 @@ class Soofa(object):
 
 
 if __name__ == '__main__':
-    soofa = Soofa("5002", '3ixwt45uq88wttqgixpyla8d27ob0w')
+    soofa = Soofa("5005", '1zjmqsomeaxx8j8nqrn3t9oc1ee4ig')
     print(soofa.get_balance())
     exists = soofa.find("QTMB6")
     if exists:

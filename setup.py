@@ -3,13 +3,13 @@ from distutils.core import setup
 try:
   with open("README.rst", "r") as fh:
     long_description = fh.read()
-except ImportError:
+except IOError:
   long_description = "Soofapay python intergration"
 
 setup(
   name = 'soofa',
   packages = ['soofa'],
-  version = '0.1.6',
+  version = '0.1.10',
   license='MIT',
   description = 'Python package to simplify integration to soofapay',
   long_description=long_description,
@@ -26,10 +26,10 @@ setup(
     'Intended Audience :: Developers',
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
   ],
 )
