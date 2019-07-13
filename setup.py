@@ -1,7 +1,10 @@
 from distutils.core import setup
 
-with open("README.rst", "r") as fh:
-  long_description = fh.read()
+try:
+  with open("README.rst", "r") as fh:
+    long_description = fh.read()
+except ImportError:
+  long_description = "Soofapay python intergration"
 
 setup(
   name = 'soofa',
