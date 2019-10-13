@@ -21,7 +21,7 @@ class Soofa(object):
         self.status = None
 
     def find(self, tid):
-        url = 'http://api.soofapay.com/v1/transactions/%s/' % tid
+        url = 'https://api.soofapay.com/v1/transactions/%s/' % tid
         r = requests.get(
             url, headers={
                 "Authorization": "Token %s" % self.client_secret,
@@ -49,7 +49,7 @@ class Soofa(object):
         return self.transaction
 
     def get_balance(self):
-        url = "http://api.soofapay.com/v1/balance/"
+        url = "https://api.soofapay.com/v1/balance/"
         r = requests.get(
             url, headers={
                 "Authorization": "Token %s" % self.client_secret,

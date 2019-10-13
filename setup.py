@@ -9,7 +9,7 @@ except IOError:
 setup(
   name = 'soofa',
   packages = ['soofa'],
-  version = '0.1.10',
+  version = '0.1.11',
   license='MIT',
   description = 'Python package to simplify integration to soofapay',
   long_description=long_description,
