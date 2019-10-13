@@ -16,7 +16,7 @@ setup(
   author = 'Soofapay Team',
   author_email = 'info@soofapay.com',
   url = 'https://github.com/soofapay/python-soofa',
-  download_url = 'https://github.com/soofapay/python-soofa/archive/v0.1.2-alpha.tar.gz',
+  download_url = 'https://github.com/soofapay/python-soofa/archive/v0.1.11-beta.tar.gz',
   keywords = ['soofa', 'soofapay', 'pay', "python"],
   install_requires=[
           'requests',
